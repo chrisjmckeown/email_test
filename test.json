@@ -1,0 +1,55 @@
+{
+  "0": {
+    "accepted": [
+      "chris.j.mckeown@hotmail.com"
+    ],
+    "ehlo": [
+      "SIZE 52428800",
+      "8BITMIME",
+      "PIPELINING",
+      "PIPECONNECT",
+      "AUTH PLAIN LOGIN",
+      "HELP"
+    ],
+    "envelope": {
+      "from": "chris@kiwicodes.com",
+      "to": [
+        "chris.j.mckeown@hotmail.com"
+      ]
+    },
+    "envelopeTime": 179,
+    "messageId": "<574c14ee-e5cc-cbe8-fcc2-1d26cc26c4f1@kiwicodes.com>",
+    "messageSize": 303,
+    "messageTime": 1947,
+    "rejected": [],
+    "response": "250 OK id=1px4ZZ-005vyR-0C"
+  },
+  "1": {
+    "accepted": [
+      "chris@kiwicodes.com"
+    ],
+    "ehlo": [
+      "SIZE 52428800",
+      "8BITMIME",
+      "PIPELINING",
+      "PIPECONNECT",
+      "AUTH PLAIN LOGIN",
+      "HELP"
+    ],
+    "envelope": {
+      "from": "chris@kiwicodes.com",
+      "to": [
+        "chris@kiwicodes.com"
+      ]
+    },
+    "envelopeTime": 175,
+    "messageId": "<5a3538cc-b2ed-88bb-afbf-214d79566b37@kiwicodes.com>",
+    "messageSize": 295,
+    "messageTime": 109,
+    "rejected": [],
+    "response": "250 OK id=1px4ZZ-005vyS-07"
+  },
+  "level": "info",
+  "message": "emails sent",
+  "service": "user-service"
+}

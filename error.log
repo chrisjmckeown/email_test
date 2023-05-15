@@ -1,0 +1,2 @@
+{"level":"error","service":"user-service"}
+{"level":"error","message":"objectKeys is not defined","service":"user-service"}

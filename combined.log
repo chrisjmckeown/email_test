@@ -1,0 +1,5 @@
+{"level":"info","message":"Server is ready to take our messages","service":"user-service"}
+{"level":"info","message":"POST /send-email 200","service":"user-service"}
+{"level":"info","message":"sending email","service":"user-service"}
+{"level":"info","message":"emails sent","service":"user-service"}
+{"level":"info","message":["chris.j.mckeown@hotmail.com","chris@kiwicodes.com"],"service":"user-service"}
