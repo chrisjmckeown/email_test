@@ -37,12 +37,19 @@ app.post("/send-email", async (req, res) => {
     });
 
     const emailPromises = emails.map((email) => {
-      const { to, body } = email;
+      const { to, code } = email;
       const mailOptions = {
         from: process.env.EMAIL_USER,
         to,
         subject: "Bonus Tools - New Cloud Licensing - Revit 2024 enabled",
-        text: body,
+        html: `<p>Hello,</p><p>We miss you and would like you back. We would like to offer you anextended trial to our new cloud based licensing method, licenses are no longer locked to one PC, work from any location, work, home, site, anywhere. Please review the growing range of tutorials from our Wiki site: <a href='https://kiwicodes.freshdesk.com/support/solutions/folders/51000372057' >Tutorials</a>.</p><p><a name='_MailAutoSig'><strong>Please find you key here: ${code}</strong></a></p><ol start='1' type='1'><li> Please review this tutorial that will explain how to install Bonus Tools: <a href='https://kiwicodes.freshdesk.com/support/solutions/articles/51000305792-02-installation-basic' >02 Installation Basic</a ></li><li> You can download the current version of Bonus Tools from here: <a href='https://kiwicodes.freshdesk.com/a/solutions/articles/51000302037' >Latest Releases</a >(you must use the latest version with the key above)</li><li> Please see here instructions to activate your license key once received: <a href='https://kiwicodes.freshdesk.com/support/solutions/articles/51000323073-4c-kc-license-activation' >4c KC License Activation</a ></li><li> A License Manager Viewer is available to login to at the below address</li><ol start='1' type='1'> <li> <a href='https://licensemanager.kiwicodes.com/'>https://licensemanager.kiwicodes.com/</a > </li> <li>You will need to create an account with your BT Activation Key.</li></ol></ol><p>If you have any questions or suggestions please don’t hesitate in replying.</p><p>Regards</p><p><strong>Chris Mckeown</strong><br>Director/Programmer</p><p><img border='0' width='176' height='36' src='cid:KiwicodesLogo' /></p><p ><a href='mailto:chris@kiwicodes.com' target='_blank' style='color:rgb(31, 73, 125); font-size: 0.875em'>chris@kiwicodes.com</a><br><a href='http://www.kiwicodes.com/' target='_blank' style='color:rgb(31, 73, 125); font-size: 0.875em'>www.kiwicodes.com</a></p>`,
+        attachments: [
+          {
+            filename: "KiwicodesLogo.png",
+            path: "./KiwicodesLogo.png",
+            cid: "KiwicodesLogo",
+          },
+        ],
       };
 
       return transporter.sendMail(mailOptions);
